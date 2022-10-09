@@ -1,5 +1,8 @@
 import CardInfos from './CardInfos.js';
 
+const gallery = document.getElementById('gallery');
+const lightboxModal = document.getElementById('modal-lightbox');
+
 export default class Media {
   /* ENG: Target Element gallery */
   /* FR: Cible de l'élement gallery */
@@ -112,6 +115,18 @@ export default class Media {
     /* FRA: Mise à jour de l'affichage de la valeur total des likes sur la carte info */
     CardInfos.updateTotalLike();
   };
+
+  static showGallery = () => {
+    if(!lightboxModal.classList.contains('open')){
+      gallery.setAttribute('visible','true')
+    }
+  }
+
+  static hideGallery = () => {
+    if(lightboxModal.classList.contains('open')){
+      gallery.setAttribute('visible','false')
+    }
+  }
 
   getLikeBtn = () => {
     const containerButton = document.createElement('span');
