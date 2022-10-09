@@ -1,3 +1,5 @@
+import Media from './Media.js';
+
 export default class LightBox {
   constructor (elements, index) {
     /* ENG: Retrieve the modal light box element from the html view */
@@ -63,7 +65,9 @@ export default class LightBox {
     this.closeBtn = closeBtn;
     /* ENG: On click close de lightbox */
     /* FRA: Au clique, fermeture de la lightbox */
-    closeBtn.addEventListener('click', () => this.closeLightbox());
+    closeBtn.addEventListener('click', () => {
+      this.closeLightbox();
+    });
 
     mediaContainer.appendChild(this.getMedia());
     container.appendChild(mediaContainer);
@@ -82,6 +86,7 @@ export default class LightBox {
     document.body.classList.add('no-scroll');
     document.addEventListener('keydown', this.keyControl);
     this.target.focus();
+    Media.hideGallery();
   };
 
   /* ENG: Close the lightbox */
@@ -90,6 +95,7 @@ export default class LightBox {
     this.target.classList.remove('open');
     document.body.classList.remove('no-scroll');
     document.removeEventListener('keydown', this.keyControl);
+    Media.showGallery();
   };
 
   /* ENG: This function will keep the focus on the lightbox element */

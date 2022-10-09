@@ -331,7 +331,8 @@ body.no-scroll {
   display: none;
   justify-content: center;
   align-items: center;
-  background-color: rgba(31, 31, 31, 0.9);
+  /* background-color: rgba(31, 31, 31, 0.9); */
+  background-color: #FFF;
   z-index: 100;
 }
 .lightbox.open {
@@ -687,6 +688,14 @@ body.no-scroll {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.gallery[visible=false] {
+  display: none;
+}
+
+.gallery[visible=true] {
+  display: grid;
 }
 
 /*# sourceMappingURL=style.css.map */
