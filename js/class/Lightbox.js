@@ -32,7 +32,9 @@ export default class LightBox {
     /* ENG: Titre de l'element du media */
     const title = document.createElement('p');
     title.setAttribute('class', 'title');
+    title.setAttribute('tabindex', '0');
     title.innerHTML = this.current.title;
+    title.setAttribute('label-index', title.innerHTML);
     this.title = title;
 
     /* ENG: LightBox Arrow left creation */
@@ -160,6 +162,8 @@ export default class LightBox {
     if (this.current.img) {
       media = document.createElement('img');
       media.setAttribute('class', 'media');
+      media.setAttribute('tabindex', '0');
+      media.setAttribute('label-index', this.current.alt);
       media.setAttribute('alt', this.current.alt);
       media.src = `assets/images/${this.current.photographerId}/` + this.current.img;
     } else {
