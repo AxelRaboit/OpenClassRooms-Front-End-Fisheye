@@ -45,8 +45,10 @@ export default class Video extends Media {
     /* ENG: This span will be inside the div like */
     /* FRA: Cette span sera à l'intérieur de la div like */
     const likeNb = document.createElement('span');
+    likeNb.setAttribute('tabindex', '0');
     likeNb.setAttribute('class', 'media__infos__likes-nb');
     likeNb.innerHTML = this.likes;
+    likeNb.setAttribute('aria-label', likeNb.innerHTML);
 
     /* ENG: We store the span iin a variable likeCount preceded by a this */
     /* FRA: On stock la span dans une variable likeCount précédé d'un this */

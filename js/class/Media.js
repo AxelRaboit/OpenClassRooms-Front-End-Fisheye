@@ -117,16 +117,16 @@ export default class Media {
   };
 
   static showGallery = () => {
-    if(!lightboxModal.classList.contains('open')){
-      gallery.setAttribute('visible','true')
+    if (!lightboxModal.classList.contains('open')) {
+      gallery.setAttribute('visible', 'true');
     }
-  }
+  };
 
   static hideGallery = () => {
-    if(lightboxModal.classList.contains('open')){
-      gallery.setAttribute('visible','false')
+    if (lightboxModal.classList.contains('open')) {
+      gallery.setAttribute('visible', 'false');
     }
-  }
+  };
 
   getLikeBtn = () => {
     const containerButton = document.createElement('span');

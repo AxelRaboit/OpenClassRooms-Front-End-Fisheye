@@ -84,7 +84,7 @@ export default class LightBox {
   /* ENG: Open the lightbox */
   /* FRA: Ouverture de la lightbox */
   openLightbox = () => {
-    this.target.classList.add('open');    
+    this.target.classList.add('open');
     document.body.classList.add('no-scroll');
     document.addEventListener('keydown', this.keyControl);
     this.target.focus();
