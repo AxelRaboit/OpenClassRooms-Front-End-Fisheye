@@ -31,7 +31,18 @@ export default class Video extends Media {
 
     /* ENG: On click to the media, display the lightbox */
     /* FRA: Sur le clique du media, on affiche la lightbox */
-    media.addEventListener('click', () => new LightBox(Media.instances, Media.instances.indexOf(this)));
+    media.addEventListener('click', () => {
+      new LightBox(Media.instances, Media.instances.indexOf(this))
+    });
+
+    /* ENG: On press enter on the media, display the lightbox */
+    /* FRA: En pressant la touche enter sur le media, on affiche la lightbox */
+    media.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        new LightBox(Media.instances, Media.instances.indexOf(this))
+      }
+    });
 
     const footer = document.createElement('footer');
     footer.setAttribute('class', 'media__infos');
