@@ -39,6 +39,7 @@ const displayModal = () => {
   modalForm.classList.add('open');
   document.body.classList.add('no-scroll');
   modalForm.focus();
+  document.addEventListener('keydown', accessibility)
 };
 
 /* ENG: Close modal */
@@ -52,8 +53,9 @@ const closeModal = (e) => {
 
 const accessibility = (e) => {
   e.key === 'Escape' && close();
-
+  
   if (e.key === 'Tab' && e.target === modalCloseButton) {
+    console.log('ok')
     e.preventDefault();
     contactForm.focus();
   };
