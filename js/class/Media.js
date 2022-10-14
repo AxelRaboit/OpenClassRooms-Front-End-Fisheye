@@ -1,4 +1,5 @@
 import CardInfos from './CardInfos.js';
+import LightBox from './LightBox.js';
 
 const gallery = document.getElementById('gallery');
 const lightboxModal = document.getElementById('modal-lightbox');
@@ -159,4 +160,8 @@ export default class Media {
 
     return containerButton;
   };
+
+  /* ENG: EsLint wants to declare a new object not between braces */
+  /* FRA: EsLint veut que l'on déclare un nouvel objet pas entre accolades */
+  static newLightbox = (mediaInstance, mediaIndex) => new LightBox(mediaInstance, mediaIndex);
 }

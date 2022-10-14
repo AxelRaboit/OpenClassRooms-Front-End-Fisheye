@@ -1,9 +1,10 @@
 import Photographer from './Photographer.js';
 
 const modalForm = document.getElementById('modal-form');
+const contactForm = document.getElementById('contact-form');
 const firstname = document.getElementById('first-name');
 const lastname = document.getElementById('last-name');
-const email = document.getElementById('form-emailemail');
+const email = document.getElementById('email');
 const message = document.getElementById('message');
 const modalCloseButton = document.getElementById('closeModal');
 const modalSubmitButton = document.getElementById('submitForm');
@@ -46,6 +47,16 @@ const closeModal = (e) => {
   modalForm.classList.remove('open');
   document.body.classList.add('no-scroll');
   document.getElementById('contact-btn').focus();
+  document.removeEventListener('keydown', accessibility);
+};
+
+const accessibility = (e) => {
+  e.key === 'Escape' && close();
+
+  if (e.key === 'Tab' && e.target === modalCloseButton) {
+    e.preventDefault();
+    contactForm.focus();
+  };
 };
 
 /**
