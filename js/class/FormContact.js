@@ -55,7 +55,6 @@ const accessibility = (e) => {
   e.key === 'Escape' && close();
   
   if (e.key === 'Tab' && e.target === modalCloseButton) {
-    console.log('ok')
     e.preventDefault();
     contactForm.focus();
   };
