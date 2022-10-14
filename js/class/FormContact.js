@@ -1,10 +1,10 @@
 import Photographer from './Photographer.js';
 
 const modalForm = document.getElementById('modal-form');
-const firstname = document.getElementById('form-first-name');
-const lastname = document.getElementById('form-last-name');
-const email = document.getElementById('form-email');
-const message = document.getElementById('form-message');
+const firstname = document.getElementById('first-name');
+const lastname = document.getElementById('last-name');
+const email = document.getElementById('form-emailemail');
+const message = document.getElementById('message');
 const modalCloseButton = document.getElementById('closeModal');
 const modalSubmitButton = document.getElementById('submitForm');
 
