@@ -86,7 +86,7 @@ export default class LightBox {
   openLightbox = () => {
     this.target.classList.add('open');
     document.body.classList.add('no-scroll');
-    document.addEventListener('keydown', this.keyControl);
+    document.addEventListener('keydown', this.accessibility);
     this.target.focus();
     Media.hideGallery();
   };
@@ -96,7 +96,7 @@ export default class LightBox {
   closeLightbox = () => {
     this.target.classList.remove('open');
     document.body.classList.remove('no-scroll');
-    document.removeEventListener('keydown', this.keyControl);
+    document.removeEventListener('keydown', this.accessibility);
     Media.showGallery();
   };
 
@@ -114,7 +114,7 @@ export default class LightBox {
    * FRA: Cette fonction controle les entrés clavier sur la lightbox
    * @param {KeybordEvent} e
    */
-  keyControl = (e) => {
+  accessibility = (e) => {
     switch (e.key) {
       case 'ArrowLeft':
         this.prevMedia();

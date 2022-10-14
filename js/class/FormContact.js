@@ -52,7 +52,7 @@ const closeModal = (e) => {
 };
 
 const accessibility = (e) => {
-  e.key === 'Escape' && close();
+  e.key === 'Escape' && closeModal();
   
   if (e.key === 'Tab' && e.target === modalCloseButton) {
     e.preventDefault();
