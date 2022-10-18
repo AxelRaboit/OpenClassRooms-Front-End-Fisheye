@@ -46,7 +46,7 @@ const displayModal = () => {
 /* FRA: Fermeture de la modal */
 const closeModal = (e) => {
   modalForm.classList.remove('open');
-  document.body.classList.add('no-scroll');
+  document.body.classList.remove('no-scroll');
   document.getElementById('contact-btn').focus();
   document.removeEventListener('keydown', accessibility);
 };
