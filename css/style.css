@@ -78,15 +78,12 @@ body.no-scroll {
 .header__logo {
   grid-area: 1/1/2/2;
   place-self: center start;
-  height: 30px;
 }
 .header__logo img {
   width: 125px;
+  height: auto;
 }
 @media screen and (min-width: 375px) {
-  .header__logo {
-    height: 35px;
-  }
   .header__logo img {
     width: 150px;
   }

@@ -24,14 +24,13 @@
     &__logo {
         grid-area: 1 / 1 / 2 / 2;
         place-self: center start;
-        height: 30px;
 
         img {
             width: $logo-width-xs;
+            height: auto;
         }
 
         @media screen and (min-width: 375px) {
-            height: 35px;
             img {
                 width: $logo-width-md;
             }
